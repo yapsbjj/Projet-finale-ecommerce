@@ -16,7 +16,7 @@ const ShopCategory = (props) => {
                     <span>De 1-12</span> sur 36
                 </p>
                 <div className="shopCategory-sort">
-                    Tri par <img className='shopCategory-banner' src={dropdown_icon} alt=''/>
+                    Tri par <img src={dropdown_icon} alt=''/>
                 </div>
             </div>
             <div className="shopCategory-products">
