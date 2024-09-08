@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import './ProductDisplay.css';
 import star_icon from '../Assets/Frontend_Assets/star_icon.png';
 import star_dull_icon from '../Assets/Frontend_Assets/star_dull_icon.png';
+import { ShopContext } from "../../Context/ShopContest";
 
 const ProductDisplay = (props) => {
     const {product} = props;
+    const {addToCart} = useContext(ShopContext);
     return(
         <div className="productDisplay">
             <div className="productDisplay-left">
@@ -34,11 +36,8 @@ const ProductDisplay = (props) => {
             </div>
             <div className="productDisplay-right-description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, est? Nam perspiciatis eaque minus unde cum ratione facere culpa! Fugiat laboriosam optio, debitis molestiae repellendus excepturi. Odit quia reiciendis, dolore soluta ab 
-                recusandae aspernatur saepe obcaecati provident necessitatibus eos laboriosam minima labore,
-                 voluptatem placeat autem adipisci pariatur nisi sed beatae ullam? Rerum quibusdam nostrum in voluptatem
-                  blanditiis explicabo doloribus, tenetur earum qui odit voluptatum itaque neque ipsum dolore cupiditate 
-                  quod odio laboriosam. Aspernatur excepturi minima quis nisi distinctio! Voluptates quasi recusandae 
-                  asperiores illum vero officiis quod odio consectetur esse vitae repellat quam aliquam sequi nulla 
+                recusandae aspernatur saepe obcaecati provident necessitatibus eos laboriosam minima labore
+                 
                   
             </div>
             <div className="productDisplay-right-size">
@@ -51,7 +50,7 @@ const ProductDisplay = (props) => {
                     <div>XXL</div>
                 </div>
             </div>
-            <button>Ajouter au panier</button>
+            <button  onClick={()=>{addToCart(product.id)}}>Ajouter au panier</button>
             <p className="productDisplay-right-category"><span>Categorie :</span> Femme, T-shirt, Crop Top</p>
             <p className="productDisplay-right-category"><span>Tags :</span> Moderne, Nouveauté</p>
             </div>
