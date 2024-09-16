@@ -4,7 +4,7 @@ import { ShopContext } from '../../Context/ShopContest.jsx';
 import remove_icon from '../Assets/Frontend_Assets/cart_cross_icon.png';
 
 const CartItems = () => {
-    const { all_product, cartItems, removeFromCart } = useContext(ShopContext);
+    const {getTotalCartAmount, all_product, cartItems, removeFromCart } = useContext(ShopContext);
 
     return (
         <div className='cartItem'>
@@ -43,7 +43,7 @@ const CartItems = () => {
                         <div>
                             <div className="cart-items-total-item">
                                 <p>Sous-total</p>
-                                <p>{0}€</p>
+                                <p>{getTotalCartAmount()}€</p>
                             </div>
                             <hr />
                             <div className="cart-items-total-item">
@@ -53,8 +53,16 @@ const CartItems = () => {
                             <hr />
                             <div className="cart-items-total-item">
                                 <h3>Total</h3>
-                                <h3>{0}€</h3>
+                                <h3>{getTotalCartAmount()}€</h3>
                             </div>
+                        </div>
+                        <button>Procéder au paiement</button>
+                    </div>
+                    <div className="cart-items-promocode">
+                        <p>Si vous avez un code promo, Entrer le ici</p>
+                        <div className="cart-items-promobox">
+                            <input type="text" placeholder='Code Promo'/>
+                            <button>Valider</button>
                         </div>
                     </div>
                 </div>
