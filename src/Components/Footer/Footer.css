@@ -61,3 +61,34 @@
     background: #c7c7cc;
 }
 
+@media(max-width:800px){
+.footer{
+    gap: 20px;
+}
+
+.footer_logo{
+    gap: 10px;
+    align-items: end;
+}
+
+.footer_logo img{
+    width: 40px;
+}
+
+.footer_logo p{
+    font-size: 25px;
+}
+
+.footer-links{
+    font-size: 14px;
+    gap: 10px;
+}
+
+.footer-social-icons img{
+width: 22px;
+}
+
+.footer-copyright{
+    font-size: 13px;
+}
+}

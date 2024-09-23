@@ -42,3 +42,42 @@ row-gap: 80px;
     font-size: 18px;
     font-weight: 500;
 }
+
+@media(max-width:1280px){
+    .shopCategory-banner{
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    .shopCategory-indexSort{
+        width: 90%;
+        margin: auto;
+    }
+
+    .shopCategory-sort{
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .shopCategory-indexSort p{
+        font-size: 12px;
+    }
+
+    .shopCategory-products{
+        width: 90%;
+        margin: 10px auto;
+        row-gap: 40px;
+    }
+
+    .shopCategory-products .item{
+        margin: auto;
+    }
+
+    .shopCategory-loadmore{
+        margin: 100% auto;
+        width: 200px;
+        height: 60px;
+        font-size: 16px;
+    }
+
+}
