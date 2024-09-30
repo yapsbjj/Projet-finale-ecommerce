@@ -16,17 +16,17 @@ const getDefaultCart = ()=>{
 const ShopContextProvider = (props) =>{
     const [cartItems,setCartItems] = useState(getDefaultCart());
     
-
+//Ajouter un produit dans le logo du panier
 const addToCart = (itemId)=>{
     setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}));
     console.log(cartItems);
     
 }
-
+//Supprimer un produit du panier
 const removeFromCart = (itemId)=>{
     setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}));
 }
-
+//Afficher la somme des produits du panier
 const getTotalCartAmount = () =>  {
     let totalAmount = 0;
     for(const item in cartItems)
@@ -41,7 +41,7 @@ const getTotalCartAmount = () =>  {
         return totalAmount;
         }
 }
-
+//Afficher le total final du panier
 const getTotalCartItems = () => {
 let totalItem = 0;
 for(const item in cartItems)

@@ -74,10 +74,33 @@ row-gap: 80px;
     }
 
     .shopCategory-loadmore{
-        margin: 100% auto;
+        margin: 100px auto;
         width: 200px;
         height: 60px;
         font-size: 16px;
     }
 
+}
+
+@media(max-width:800px){
+    .shopCategory-banner{
+        width: 95%;
+    }
+
+    .shopCategory-products{
+        width: 95%;
+    }
+
+    .shopCategory-loadmore{
+        margin: 60px auto;
+        width: 150px;
+        height: 40px;
+        font-size: 13px;
+    }
+}
+
+@media(max-width:500px){
+    .shopCategory-products{
+        grid-template-columns: 1fr 1fr;
+    }
 }
